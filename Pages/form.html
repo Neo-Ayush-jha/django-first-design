@@ -1,0 +1,66 @@
+{% include "navbar.html" %}
+
+    <div class="content">
+        <div class="container mt-3">
+            <div class="row">
+                <div class="col-6 offset-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <h3 class="text-center fs-3 fst-bold py-2 bg-warning">Apply here</h3>
+                            <hr>
+                            <form action="/apply" method="post">
+                                <div class="mb-3">
+                                    <label for="">Name</label>
+                                    <input type="text" name="name" class="form-control @error('name') is-invalid"
+                                        value="'neo ayush'">
+                                </div>
+                                <div class="row">
+                                    <div class="mb-3 col">
+                                        <label for="">contact</label>
+                                        <input type="text" name="contact"
+                                            class="form-control @error('contact') is-invalid" value="'9117685337'">
+                                    </div>
+                                    <div class="mb-3 col">
+                                        <label for="">email</label>
+                                        <input type="text" name="email" class="form-control @error('email') is-invalid"
+                                            value="'ayush91176@gmail.com'">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="mb-3 col">
+                                        <label for="">DOB</label>
+                                        <input type="date" name="dob" class="form-control @error('dob') is-invalid"
+                                            value="'01/11/2001'">
+                                    </div>
+                                    <div class="mb-3 col">
+                                        <label for="">gender</label>
+                                        <input type="text" name="gender"
+                                            class="form-control @error('gender') is-invalid" value="'mail'">
+                                    </div>
+                                </div>
+                                <div class="mb-3 col">
+                                    <label for="">address</label>
+                                    <input type="text" name="address" class="form-control @error('address') is-invalid"
+                                        value="'Purnea Bihar'">
+                                </div>
+                                <div class="mb-3 col">
+                                    <label for="">Password</label>
+                                    <input type="text" name="password"
+                                        class="form-control @error('password') is-invalid" value="'********'">
+                                </div>
+                                <div class="mb-3">
+                                    <input type="submit" name="submit" class="btn btn-success w-100">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+   {%include "footer.html" %}
+
+</body>
+
+</html>

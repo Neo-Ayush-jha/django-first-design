@@ -1,0 +1,71 @@
+{%include "navbar.html" %}
+<div class="container-fluid text-white py-5"
+    style="background: url('https://appco.themetags.com/img/footer-bg.png')no-repeat center center / cover;height:550px;">
+    <div class="row mt-xl-3">
+        <div class="col-lg-9 col-sm-12 mt-xl-5">
+            <h5 class="display-6 text-light"
+                style="font-size:75px;font-family:Nunito;text-shadow:2.5px 2.5px rgb(170, 54, 54)">Skill Hai! To Future
+                Hai!
+            </h5>
+            <p class="lead text-light mt-3 fs-4" style="font-family: Handlee, cursive;">"CWS is an on-demand marketplace
+                for top Programming engineers,developers, consultants, architects, programmers, and tutors. Get your projects built by vetted webprogramming freelancers or learn from expert with team training & coaching experiences in Project based training."</p>
+            <p class="display-7 font-weight-bold text-white text-end me-5 fs-4 " style="text-shadow:2.5px 2.5px rgb(170, 54, 54)">~ SadiQ Hussan ~</p>
+        </div>
+        <div class="col-lg-3 col-sm-6 mt-xl-5">
+            <img src="https://i.ytimg.com/vi/K_Lz_7CMb7Q/maxresdefault.jpg" alt="" class="img-fluid card-img-top shadow-lg mt-2" style="border-radius: 1.5rem;height:auto">
+        </div>
+    </div>
+</div>
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-3">
+            <div class="card shadow border-0">
+                <div class="card-body ">
+                    <h3 class="fs-2 mx-2 px-2" style="border-left:6px solid #32393f"> Our Courses </h3>
+                </div>
+            </div>
+        </div>
+        <div class="row my-5">
+            {%for goto in posts%}
+            <div class="col-lg-4 col-md-6 col-sm-10 my-sm-3">
+                <div class="card">
+                    <div class="card-body">
+                        <h2 class="card-title fs-2 text-center">{{goto.title}}</h2>
+                        <img src="https://i.ytimg.com/vi/K_Lz_7CMb7Q/maxresdefault.jpg" alt="Desk with leather desk pad, walnut desk organizer, wireless keyboard and mouse, and porcelain mug." class="h-full w-full object-cover object-center" style="border-radius: 1.5rem;height:auto">
+                        <h4 class="fst-italic my-2">{{goto.date}} ||<span
+                                class="mx-6 font-monospace">{{goto.author}}</span></h4>
+                        <p class="card-text lh-sm  mb-2">{{goto.contact|slice:"0:145" }}</p>
+                        <hr>
+                        <a href="/view/" class="btn mt-2 text-light" style="background-image: linear-gradient(to right, rgba(32, 40, 119, 1), rgba(55, 46, 149, 1), rgba(83, 49, 177, 1), rgba(114, 48, 205, 1), rgba(150, 41, 230, 1)) !important;margin-left:70%">Read more</a>
+                    </div>
+                </div>
+            </div>
+            {%endfor%}
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-4">
+            <div class="card shadow border-0">
+                <div class="card-body ">
+                    <h3 class="fs-2 mx-2 px-2" style="border-left:6px solid #32393f"> Our Placements </h3>
+                </div>
+            </div>
+        </div>
+        <div class="row my-5 text-center">
+            {%for goto in interns%}
+            <div class="col-lg-4 col-md-6 col-sm-10 my-sm-3 ">
+                <div class="card p-0 mx-auto">
+                    <div class="card-body px-1 py-0 mx-auto">
+                        <img src="https://appamatix.com/wp-content/uploads/2016/05/Anonymous-FeatPic.jpg" alt="Desk with leather desk pad, walnut desk organizer, wireless keyboard and mouse, and porcelain mug." class="h-full w-full object-cover text-center" style="height:auto ;">
+                        <h4 class="card-title fs-2 text-center py-0">{{goto.name}}</h4>
+                        <hr class="p-0 m-0">
+                        <p class="fst-italic my-1">{{goto.company}} || <span class="card-text lh-sm  py-0">{{goto.post}}</span></p>
+                    </div>
+                </div>
+            </div>
+            {%endfor%}
+        </div>
+    </div>
+</div>
+{%include "footer.html" %}
