@@ -4,6 +4,8 @@ class Post(models.Model):
     author=models.CharField(max_length=100)
     contact=models.TextField()
     date=models.DateField(auto_now_add=True)
+    image=models.ImageField(upload_to ="image",default="")
+    price=models.IntegerField(default=0)
     
     def __str__(self):
         return self.title

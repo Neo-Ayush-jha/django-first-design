@@ -30,11 +30,12 @@
             <div class="col-lg-4 col-md-6 col-sm-10 my-sm-3">
                 <div class="card">
                     <div class="card-body">
-                        <h2 class="card-title fs-2 text-center">{{goto.title}}</h2>
-                        <img src="https://i.ytimg.com/vi/K_Lz_7CMb7Q/maxresdefault.jpg" alt="Desk with leather desk pad, walnut desk organizer, wireless keyboard and mouse, and porcelain mug." class="h-full w-full object-cover object-center" style="border-radius: 1.5rem;height:auto">
+                        <h2 class="card-title fs-2 text-center">{{goto.title|slice:"0:20"}}...</h2>
+                        <!-- <img src="{{goto.media.image.url}}" alt="CWS" class="h-full w-full object-cover object-center" style="border-radius: 1.5rem;height:auto"> -->
+                        <img src="https://i.ytimg.com/vi/K_Lz_7CMb7Q/maxresdefault.jpg" alt="CWS" class="h-full w-full object-cover object-center" style="border-radius: 1.5rem;height:auto">
                         <h4 class="fst-italic my-2">{{goto.date}} ||<span
                                 class="mx-6 font-monospace">{{goto.author}}</span></h4>
-                        <p class="card-text lh-sm  mb-2">{{goto.contact|slice:"0:145" }}</p>
+                        <p class="card-text lh-sm  mb-2">{{goto.contact|slice:"0:130" }}....</p>
                         <hr>
                         <a href="/view/" class="btn mt-2 text-light" style="background-image: linear-gradient(to right, rgba(32, 40, 119, 1), rgba(55, 46, 149, 1), rgba(83, 49, 177, 1), rgba(114, 48, 205, 1), rgba(150, 41, 230, 1)) !important;margin-left:70%">Read more</a>
                     </div>
